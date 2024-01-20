@@ -119,7 +119,7 @@ def I2C_SendReceiveData(Data, ReadByteCount = 0):
             RPi.GPIO.output(GPIO_I2C_SDA, 0)
          else:
             RPi.GPIO.output(GPIO_I2C_SDA, 1)
-         BitMask = BitMask / 2
+         BitMask = BitMask // 2
 
          RPi.GPIO.output(GPIO_I2C_SCL, 1)
          time.sleep(I2C_CLOCK_PERIOD)
